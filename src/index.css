@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+.text-heading {
+  @apply text-[40px]  md:text-[40px] xl:text-[72px];
+}
+.text-paragraf {
+  @apply text-white/70  md:text-[13px] lg:text-[1rem] xl:text-[18px];
+}
+.sub-paragraf {
+  @apply text-white/70;
+}
+.title-heading {
+  @apply text-[27px] mb-3 md:text-[48px] min-[688px]:text-4xl min-[688px]:leading-[60px] lg:leading-normal;
+}
+.footer-link {
+  @apply text-white/70 min-[375px]:text-[14px] min-[412px]:text-[16px] hover:text-white/100;
+}
+
+/* todo setingan dasar element */
+.diskon {
+  @apply box-border rounded-[10px];
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+.flexc {
+  @apply flex justify-center items-center;
+}
+.generation {
+  @apply font-semibold leading-[140%] tracking-[0.01em] bg-clip-text;
+  background: radial-gradient(
+      64.18% 64.18% at 71.16% 35.69%,
+      #def9fa 0.89%,
+      #bef3f5 17.23%,
+      #9dedf0 42.04%,
+      #7de7eb 55.12%,
+      #5ce1e6 71.54%,
+      #33bbcf 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+.getStartedText {
+  @apply bg-clip-text;
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+.segitiga {
+  @apply w-[50px] h-[500px] opacity-[0.65] blur-[210px] border-t-[lightskyblue] border-[300px] border-solid border-transparent;
+}
+.bulat {
+  @apply w-[195px] h-[324px] blur-[225px] rounded-[100%]; /* opacity: .5; */
+  background: lightskyblue;
+}
+.tombol {
+  @apply rounded-[10px];
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+
+/* todo endsetingan dasar element */
+main {
+  @apply grid  leading-normal place-items-center bg-[#030713];
+}
+/* todo setingan dasar element */
+.diskon {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.flexc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.generation {
+  font-weight: 600;
+  line-height: 140%;
+
+  letter-spacing: 0.01em;
+
+  background: radial-gradient(
+      64.18% 64.18% at 71.16% 35.69%,
+      #def9fa 0.89%,
+      #bef3f5 17.23%,
+      #9dedf0 42.04%,
+      #7de7eb 55.12%,
+      #5ce1e6 71.54%,
+      #33bbcf 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.getStartedText {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.segitiga {
+  width: 50px;
+  height: 500px;
+  border: 300px solid transparent;
+  border-top-color: lightskyblue;
+  opacity: 0.65;
+  filter: blur(210px);
+}
+
+.bulat {
+  /* opacity: .5; */
+  border-radius: 100%;
+  width: 195px;
+  height: 324px;
+
+  background: lightskyblue;
+  filter: blur(225px);
+}
+
+.tombol {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+  border-radius: 10px;
+}
+
+/* todo endsetingan dasar element */
+
+main {
+  display: grid;
+  line-height: 1.5;
+  place-items: center;
+  background-color: #030713;
+}
+
+/* todo settingan untuk card */
+.card {
+  border-radius: 20px;
+}
+
+.card:hover {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  backdrop-filter: blur(5px);
+}
+
+.cardInti {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  backdrop-filter: blur(5px);
+}
+
+/* todo end settingan untuk card */
+
+/* ?  settingan untuk kotakHire */
+.kotakHire {
+  min-height: 270px;
+
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  backdrop-filter: blur(5px);
+
+  border-radius: 20px;
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+
+/* ? end settingan untuk kotakHire */
+
+footer {
+  background: rgba(11, 10, 12, 0.6);
+}
+
+/* ? setingan untuk hover link*/
+a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+a::before,
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+
+  left: 0;
+}
+
+a::before {
+  background-color: #54b3d6;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #54b3d6;
+}
+
+a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+a span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+/* Presentational Styles */
+
+a {
+  text-decoration: none;
+  color: #18272f;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+/* ? setingan untuk hover link*/
+width: 140px;
+height: 140px;
+
+background: linear-gradient(
+  157.81deg,
+  #def9fa -43.27%,
+  #bef3f5 -21.24%,
+  #9dedf0 12.19%,
+  #7de7eb 29.82%,
+  #5ce1e6 51.94%,
+  #33bbcf 90.29%
+);
+border-radius: 10px;
+
+/* circle */
+.circle {
+}
