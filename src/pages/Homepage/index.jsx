@@ -1,10 +1,14 @@
 import { useEffect } from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function HomePage() {
-  useEffect(() => {});
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
-    <section className="font-popin text-white overflow-hidden   w-full relative  ">
+    <section className="relative w-full overflow-hidden text-white font-popin ">
       {/* potrait */}
       <p className=" portrait:hidden lg:hidden h-screen text-center font-bold text-[20px] flex  space-x-5 justify-center items-center ">
         <span>
@@ -24,10 +28,10 @@ export default function HomePage() {
       </p>
 
       <div className="2xl:max-w-[1440px] mx-auto landscape:hidden md:landscape:block">
-        <div className="bulat absolute top-56 -left-24 hidden xl:block"></div>
+        <div className="absolute hidden bulat top-56 -left-24 xl:block"></div>
         {/* header========================================== */}
-        <header className="w-full md:px-10  mt-5 ">
-          <nav className="flex justify-between items-center px-5  py-5">
+        <header className="w-full mt-5 md:px-10 ">
+          <nav className="flex items-center justify-between px-5 py-5">
             <div className="logo w-1/2 min-[688px]:w-[19vw] md:w-[14vw]">
               <img loading="lazy" src="assets/logo.svg" alt="logo" />
             </div>
@@ -39,31 +43,31 @@ export default function HomePage() {
                 className="block md:hidden"
               />
 
-              <ul className="space-x-16 hidden md:flex">
+              <ul className="hidden space-x-16 md:flex">
                 <li>
                   <a href="#" data-replace="Home">
-                    <span className="text-white font-popin font-semibold">
+                    <span className="font-semibold text-white font-popin">
                       Home
                     </span>
                   </a>
                 </li>
                 <li>
                   <a href="#" data-replace="About">
-                    <span className="text-white font-popin font-semibold">
+                    <span className="font-semibold text-white font-popin">
                       About
                     </span>
                   </a>
                 </li>
                 <li>
                   <a href="#" data-replace="Service">
-                    <span className=" text-white font-popin font-semibold">
+                    <span className="font-semibold text-white font-popin">
                       Service
                     </span>
                   </a>
                 </li>
                 <li>
                   <a href="#" data-replace="Contact">
-                    <span className="text-white font-popin font-semibold">
+                    <span className="font-semibold text-white font-popin">
                       Contact
                     </span>
                   </a>
@@ -76,9 +80,9 @@ export default function HomePage() {
 
         {/* 1st======================================= */}
         <section className=" my-5  overflow-hidden md:mt-[50px] xl:mt-[60px]">
-          <div className=" block md:flex md:justify-between">
+          <div className="block md:flex md:justify-between">
             {/* left */}
-            <div className=" w-full px-5 md:pl-10">
+            <div className="w-full px-5 md:pl-10">
               <div
                 data-aos="fade-up"
                 className="diskon max-w-[90%] mx-auto space-x-3  flex justify-between  items-center md:max-w-[350px] md:mx-0 md:mr-auto xl:max-w-[400px] px-5"
@@ -97,14 +101,39 @@ export default function HomePage() {
                 </div>
               </div>
               {/*  */}
-              <div className="mt-10 px-2 md:px-5 ">
-                <h1 className="text-heading  font-semibold flex flex-col -space-y-2 md:-space-y-3 xl:-space-y-5">
-                  <span>The Next</span>
-                  <span className=" generation">GENERATION</span>
-                  <span className="whitespace-nowrap">Payment Method.</span>
+              <div className="px-2 mt-10 md:px-5 ">
+                <h1 className="flex flex-col -space-y-2 font-semibold text-heading md:-space-y-3 xl:-space-y-5">
+                  <span
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="0"
+                  >
+                    The Next
+                  </span>
+                  <span
+                    className="generation"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="500"
+                  >
+                    GENERATION
+                  </span>
+                  <span
+                    className="whitespace-nowrap"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="1000"
+                  >
+                    Payment Method.
+                  </span>
                 </h1>
                 {/*  */}
-                <p className="mt-10 text-paragraf max-w-[600px]">
+                <p
+                  className="mt-10 text-paragraf max-w-[600px]"
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                  data-aos-delay="1500"
+                >
                   Our team of experts uses a methodology to identify the credit
                   cards most likely to fit your needs. We examine annual
                   percentage rates, annual fees.
@@ -114,7 +143,7 @@ export default function HomePage() {
 
             {/* right */}
             <div className="mt-10 md:mt-0 ">
-              <div className="  relative h-full ">
+              <div className="relative h-full ">
                 <img
                   loading="lazy"
                   src="assets/robot.png"
@@ -122,7 +151,7 @@ export default function HomePage() {
                   className="w-[90%] ml-auto"
                 />
               </div>
-              <div className="segitiga absolute  xl:top-48 hidden xl:block" />
+              <div className="absolute hidden segitiga xl:top-48 xl:block" />
             </div>
           </div>
         </section>
@@ -162,8 +191,8 @@ export default function HomePage() {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <div className="container flex flex-col md:flex-row justify-center items-center">
-            <div className=" flex flex-col">
+          <div className="container flex flex-col items-center justify-center md:flex-row">
+            <div className="flex flex-col ">
               <h1 className="title-heading">
                 You do the business, we’ll handle the money.
               </h1>
@@ -172,23 +201,23 @@ export default function HomePage() {
                 by building credit, earning rewards and saving money. But with
                 hundreds of credit cards on the market.
               </p>
-              <div className="flex justify-center md:justify-start items-center space-x-5 lg:space-x-10">
+              <div className="flex items-center justify-center space-x-5 md:justify-start lg:space-x-10">
                 <button className=" w-[60%] lg:w-1/3 py-4 mt-10 text-slate-900 rounded-lg tombol font-semibold hover:border-2 px-[19px]">
                   Get Started
                 </button>
               </div>
             </div>
 
-            <div className=" w-full mt-14 md:mt-0">
-              <div className="container flex flex-col space-y-5 md:space-x-6 items-center justify-center">
+            <div className="w-full mt-14 md:mt-0">
+              <div className="container flex flex-col items-center justify-center space-y-5 md:space-x-6">
                 {/*  */}
-                <div className="kotak w-5/6 m-auto hover:bg-slate-700 flex justify-around items-center px-4 py-3 space-x-5 rounded-2xl">
-                  <div className="lingkaran bg-slate-700  rounded-full aspect-square w-24 flex justify-center items-center">
+                <div className="flex items-center justify-around w-5/6 px-4 py-3 m-auto space-x-5 kotak hover:bg-slate-700 rounded-2xl">
+                  <div className="flex items-center justify-center w-24 rounded-full lingkaran bg-slate-700 aspect-square">
                     <img
                       loading="lazy"
                       src="assets/Star.svg"
                       alt="star"
-                      className=" mx-5 "
+                      className="mx-5 "
                     />
                   </div>
                   {/* *================================ */}
@@ -196,7 +225,7 @@ export default function HomePage() {
                     <h1 className="text-[19px] md:text-[18px] ">
                       100% Secured
                     </h1>
-                    <p className=" sub-paragraf  ">
+                    <p className=" sub-paragraf">
                       We take proactive steps make sure your information and
                       transactions are secure.
                     </p>
@@ -204,13 +233,13 @@ export default function HomePage() {
                 </div>
                 {/*  */}
                 {/*  */}
-                <div className="kotak w-5/6 m-auto hover:bg-slate-700 bg-slate-800 flex justify-around items-center px-4 py-3 space-x-5 rounded-2xl">
-                  <div className="lingkaran bg-slate-700  rounded-full aspect-square w-24 flex justify-center items-center">
+                <div className="flex items-center justify-around w-5/6 px-4 py-3 m-auto space-x-5 kotak hover:bg-slate-700 bg-slate-800 rounded-2xl">
+                  <div className="flex items-center justify-center w-24 rounded-full lingkaran bg-slate-700 aspect-square">
                     <img
                       loading="lazy"
                       src="assets/Shield.svg"
                       alt="star"
-                      className=" mx-5 "
+                      className="mx-5 "
                     />
                   </div>
                   {/* *================================ */}
@@ -226,13 +255,13 @@ export default function HomePage() {
                 </div>
                 {/*  */}
                 {/*  */}
-                <div className="kotak w-5/6 m-auto hover:bg-slate-700  flex justify-around items-center px-4 py-3 space-x-5 rounded-2xl">
-                  <div className="lingkaran bg-slate-700  rounded-full aspect-square w-24 flex justify-center items-center">
+                <div className="flex items-center justify-around w-5/6 px-4 py-3 m-auto space-x-5 kotak hover:bg-slate-700 rounded-2xl">
+                  <div className="flex items-center justify-center w-24 rounded-full lingkaran bg-slate-700 aspect-square">
                     <img
                       loading="lazy"
                       src="assets/Send.svg"
                       alt="star"
-                      className=" mx-5 "
+                      className="mx-5 "
                     />
                   </div>
                   {/* *================================ */}
@@ -257,8 +286,8 @@ export default function HomePage() {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <div className="bulat absolute  -left-30 hidden xl:block" />
-          <div className="container flex flex-col md:flex-row items-start justify-between md:space-x-10 ">
+          <div className="absolute hidden bulat -left-30 xl:block" />
+          <div className="container flex flex-col items-start justify-between md:flex-row md:space-x-10 ">
             <div className="">
               <img
                 loading="lazy"
@@ -268,16 +297,16 @@ export default function HomePage() {
               />
             </div>
 
-            <div className=" translate-y-10 large:px-6 md:px-0 ">
-              <h1 className="title-heading font-bold">
+            <div className="translate-y-10 large:px-6 md:px-0">
+              <h1 className="font-bold title-heading">
                 Easily control your billing &amp; invoicing.
               </h1>
-              <p className="text-paragraf font-normal">
+              <p className="font-normal text-paragraf">
                 Elit enim sed massa etiam. Mauris eu adipiscing ultrices
                 ametodio aenean neque. Fusce ipsum orci rhoncus aliporttitor
                 integer platea placerat.
               </p>
-              <div className="kontnen flex space-x-5 justify-start items-center mt-6  ">
+              <div className="flex items-center justify-start mt-6 space-x-5 kontnen ">
                 <a href="#">
                   <img loading="lazy" src="assets/apple.svg" alt="apleStore" />
                 </a>
@@ -296,9 +325,9 @@ export default function HomePage() {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <div className="container flex justify-around items-center flex-col md:flex-row md:space-x-5">
+          <div className="container flex flex-col items-center justify-around md:flex-row md:space-x-5">
             <div>
-              <h1 className="title-heading font-bold">
+              <h1 className="font-bold title-heading">
                 Find a better card deal in few easy steps.
               </h1>
               <p className="text-white/70 mini:text-[14px] mt-5 sedang:text-[16px] w-full md:w-[75%] ">
@@ -310,7 +339,7 @@ export default function HomePage() {
               </button>
             </div>
             {/*  */}
-            <div className="kiri mt-10 md:mt-0">
+            <div className="mt-10 kiri md:mt-0">
               <img loading="lazy" src="assets/card.png" alt="card" />
             </div>
           </div>
@@ -319,31 +348,31 @@ export default function HomePage() {
 
         {/* 6th */}
         <section
-          className=" mt-32  px-5 "
+          className="px-5 mt-32 "
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
           <div className=" flex flex-col  justify-around items-center md:w-[80%] mx-auto ">
             <div className="">
-              <h1 className=" title-heading font-bold text-center md:text-left">
+              <h1 className="font-bold text-center title-heading md:text-left">
                 What people are saying about us
               </h1>
             </div>
-            <div className=" ">
+            <div className="">
               <p className="text-white/70 text-base w-ful md:w-[75%] mx-auto text-center ">
                 Everything you need to accept card payments and grow your
                 business anywhere on the planet.
               </p>
-              <div className="bulat absolute -right-28 hidden xl:block" />
+              <div className="absolute hidden bulat -right-28 xl:block" />
             </div>
           </div>
-          <div className="mt-6 w-1/3 h-1 mx-auto bg-sky-500 rounded-full" />
+          <div className="w-1/3 h-1 mx-auto mt-6 rounded-full bg-sky-500" />
         </section>
         {/*end  6th */}
 
         {/* 7th Section */}
         <section
-          className=" mt-10 relative z-50"
+          className="relative z-50 mt-10 "
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
@@ -367,7 +396,7 @@ export default function HomePage() {
                   className="w-12 h-12"
                 />
 
-                <div className="flex flex-col space-y-1 -mt-2 mr-3">
+                <div className="flex flex-col mr-3 -mt-2 space-y-1">
                   <h1 className="text-[20px]">Syaid Alfarishi</h1>
                   <p className="text-white/70 mini:text-[14px] sedang:text-[16px]">
                     Front End Developer
@@ -395,7 +424,7 @@ export default function HomePage() {
                   className="w-12 h-12"
                 />
 
-                <div className="flex flex-col space-y-1 -mt-2 mr-3">
+                <div className="flex flex-col mr-3 -mt-2 space-y-1">
                   <h1 className="text-[20px]">Herman Jensen</h1>
                   <p className="text-white/70 mini:text-[14px] sedang:text-[16px]">
                     Founder &amp; Leader
@@ -422,7 +451,7 @@ export default function HomePage() {
                   alt="people 1"
                   className="w-12 h-12"
                 />
-                <div className="flex flex-col space-y-1 -mt-2 mr-3">
+                <div className="flex flex-col mr-3 -mt-2 space-y-1">
                   <h1 className="text-[20px]">Kenn Gallagher</h1>
                   <p className="text-white/70 mini:text-[14px] sedang:text-[16px]">
                     Founder &amp; Leader
@@ -436,7 +465,7 @@ export default function HomePage() {
 
         {/* 8th*/}
         <section
-          className=" mt-24"
+          className="mt-24 "
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
@@ -466,13 +495,13 @@ export default function HomePage() {
               className="w-[192px] hover:cursor-help hover:bg-white transition-all duration-300 p-5 min-h-[90px] object-contain rounded "
             />
           </div>
-          <div className="bulat absolute -left-28 hidden xl:block" />
+          <div className="absolute hidden bulat -left-28 xl:block" />
         </section>
         {/* end 8th*/}
 
         {/* 9th */}
         <section
-          className=" mt-24 "
+          className="mt-24 "
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
@@ -497,7 +526,7 @@ export default function HomePage() {
         {/* end 9th */}
 
         {/*  footer */}
-        <footer className="mt-24  ">
+        <footer className="mt-24 ">
           <div className="container pt-10 w-[90%]  flex justify-evenly items-start flex-col md:flex-row px-10 md:px-5 space-x-10">
             {/*  */}
             <div className="mt-10 md:mt-0">
@@ -591,13 +620,13 @@ export default function HomePage() {
             </div>
             {/*  */}
           </div>
-          <div className="end mt-6  flex justify-between items-center px-10 pb-4">
+          <div className="flex items-center justify-between px-10 pb-4 mt-6 end">
             <div className="">
               <p className="text-white/70 mini:text-[14px] sedang:text-[16px] text-[14px]">
                 &#0169; 2024 - Syaid Alfarishi
               </p>
             </div>
-            <div className="flex justify-between items-center space-x-5 ">
+            <div className="flex items-center justify-between space-x-5 ">
               <a href="https://www.instagram.com/sydalfhi_/">
                 <img
                   loading="lazy"
